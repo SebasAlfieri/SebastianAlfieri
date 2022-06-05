@@ -1,0 +1,406 @@
+html, body{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    scroll-behavior: smooth;
+}
+
+nav{
+    position: fixed;
+    background-color: #ffa400;
+    display: flex;
+    justify-content: space-around;
+    width: 100vw;
+    height: 7vh;
+}
+
+nav ul{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin: 0;
+    width: 100%;
+    list-style: none;
+    padding: 0;
+}
+
+nav li{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    font-size: 1.6rem;
+}
+
+nav a{
+    text-decoration: none;
+    color: white;
+    text-shadow: 1px 1px 1px black;
+}
+
+header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 100vh;
+    background-color: #232528;
+}
+
+header h1 {
+    letter-spacing: 2px;
+    font-weight: 600;
+    font-size: 50px;
+}
+
+header h2 {
+    letter-spacing: 2px;
+    font-weight: 200;
+    font-size: 30px;
+    color: #FFA400;
+}
+
+.headerTitle {
+    color: white;
+}
+
+.headerTitle ul{
+    font-size: 1rem;
+    list-style: none;
+    margin: 0;
+    padding:0;
+}
+
+.headerTitle ul h4{
+    text-decoration: underline 1px white;
+}
+
+.headerTitle li{
+    font-size: 1rem;
+    list-style: none;
+    margin-bottom: 2vh;
+}
+
+.headerTitle li a{
+    font-size: 1rem;
+    list-style: none;
+    color: #FFA400;
+    text-decoration: none;
+}
+
+.headerTitle li a:hover{
+    color: white;
+}
+
+article{
+    display: flex;
+    flex-direction: column;
+    background-color: #2B3A67;
+    height: 200vh;
+}
+
+article h2 {
+    display: flex;
+    font-size: 1.7rem;
+    margin: 5px;
+    text-decoration: underline white;
+    align-self: center;
+    color: white;
+    letter-spacing: 1px;
+    text-align: center;
+}
+
+#workGrid{
+    display: grid;
+    grid-template-areas:
+    "wTitle"
+    "wCont";
+}
+
+#workTitle {
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    margin-top: 50px;
+    grid-area: wTitle;
+}
+
+#workCont{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10vh;
+    grid: wCont;
+}
+
+.workProj{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+    width: 60vw;
+    height: 30vh;
+    text-decoration: none;
+    transition: 0.3s;
+    box-shadow: 5px 1px 8px black;
+}
+
+.top{
+    display: flex;
+    height: 75%;
+    width: 100%;
+    background-color: rgb(0, 0, 0);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#top1{
+    background-image: url(./img/valo.jpg);
+}
+
+#top2{
+    background-image: url(./img/todit.jpg);
+}
+
+#top3{
+    background-image: url(./img/lol.jpg);
+}
+
+.bottom{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 25%;
+    width: 100%;
+    background-color: #232528;
+    color: white;
+    letter-spacing: 1px;
+}
+
+.bottom h3 {
+    letter-spacing: 2px;
+    font-size: 1.3rem;
+    font-weight: 200;
+}
+
+.bottom span {
+    opacity: 0;
+    transition: 0.5s;
+    margin-left: 10px;
+    margin-right: 10px;
+    font-weight: 100;
+    color: #FFA400;
+}
+
+.workProj:hover{
+    transform: scale(1.1);
+}
+
+.workProj:hover span {
+    opacity: 1;
+}
+
+#h3lol{
+    letter-spacing: 1px;
+    font-size: 1rem;
+}
+  
+
+
+
+section{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 90vh;
+    width: 100%;
+    background-color: #232528;
+}
+
+.sectionTitles{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    height: 30%;
+    width: 100%;
+}
+
+.sectionTitles h2{
+    color: white;
+    font-size: 25px;
+}
+
+.sectionTitles h3{
+    margin-top: 0;
+    letter-spacing: 2px;
+    font-weight: 200;
+    font-size: 20px;
+    color: #FFA400;
+    font-style: italic;
+}
+
+.social{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    color: white;
+    align-items: center;
+    height: 70%;
+    font-size: 1.3rem;
+}
+
+.social a{
+    text-decoration: none;
+    color: white;
+}
+
+footer{
+    height: 10vh;
+    width: 100%;
+    color: white;
+    text-align: center;
+    border-top: 2px solid #FFA400;
+    background-color: #232528;
+}
+
+@media (min-width: 768px){
+    
+    nav{
+        justify-content: flex-end;
+    }
+
+    nav ul{
+        width: 40%;
+        margin-right: 25px;
+    }
+
+    header h2 {
+        margin-bottom: 10vh;
+    }
+
+    article{
+        height: 125vh;
+    }
+    
+    #workGrid{
+        display: grid;
+        grid-template-areas:
+        "wTitle wTitle"
+        "wCont wCont";
+    }
+    
+    .workProj{
+        width: 30vw;
+        height: 35vh;
+    }
+    
+    .bottom h3 {
+        font-size: 1.1rem;
+        font-weight: 500;
+    }
+    
+    .bottom span {
+        font-size: 1.1rem;
+        font-weight: 300;
+    }
+
+    #h3lol{
+        font-size: 0.9rem;
+    }
+
+    .sectionTitles{
+        height: 60%;
+    }
+
+    .sectionTitles h2{
+        font-size: 60px;
+    }
+
+    .sectionTitles h3{
+        font-size: 30px;
+    }
+
+    .social{
+        flex-direction: row;
+        font-size: 1rem;
+        height: 40%;
+        width: 100%;
+    }
+}
+
+@media (min-width: 1024px){
+    
+    nav{
+        justify-content: flex-end;
+    }
+
+    nav ul{
+        width: 30%;
+        margin-right: 25px;
+    }
+
+    header h2 {
+        margin-bottom: 10vh;
+    }
+
+    article{
+        height: 150vh;
+    }
+    
+    #workGrid{
+        display: grid;
+        grid-template-areas:
+        "wTitle wTitle"
+        "wCont wCont";
+    }
+    
+    .workProj{
+        width: 30vw;
+        height: 50vh;
+    }
+    
+    .bottom h3 {
+        font-size: 1.5rem;
+        font-weight: 500;
+    }
+    
+    .bottom span {
+        font-size: 1.5rem;
+        font-weight: 300;
+    }
+
+    #h3lol{
+        letter-spacing: 2px;
+        font-size: 1.5rem;
+    }
+
+    .sectionTitles{
+        height: 70%;
+    }
+
+    .sectionTitles h2{
+        font-size: 60px;
+    }
+
+    .sectionTitles h3{
+        font-size: 30px;
+    }
+
+    .social{
+        flex-direction: row;
+        height: 30%;
+        width: 100%;
+        font-size: 1.3rem;
+    }
+
+    .social a:hover{
+        text-decoration: underline 1px #FFA400;
+        color: #FFA400;
+    }   
+}
+
