@@ -59,7 +59,7 @@ function Projects() {
         link="https://sebasalfieri.github.io/Widgets/"
         title="We-Widgets"
         description="Some simple widgets using different java script features as Local Storate, API - DOM and JSON"
-        uses="Js"/>
+        uses="Js - Sass - Responsive"/>
       <Project
         img="lol.jpg"
         link="https://lolalfierii.netlify.app/"
