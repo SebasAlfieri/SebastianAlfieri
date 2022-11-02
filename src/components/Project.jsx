@@ -16,6 +16,7 @@ const ProjectContainer = styled.a`
   transition: 0.3s;
   color: black;
   text-decoration: none;
+  box-shadow: 1px 1px 5px black;
 
   &:hover{
     transform: scale(1.1)
@@ -53,7 +54,6 @@ const ProjectDescription = styled.p`
   justify-content: center;
   align-items: center;
   text-align: center;
-
 `
 
 const ProjectHover = styled.div`
@@ -69,6 +69,7 @@ const ProjectHover = styled.div`
 `
 
 function Project(props) {
+  let { img, description, title, uses, link } = props
 
   const [isHovering, setIsHovering] = useState(false);
 
@@ -81,11 +82,8 @@ function Project(props) {
   };
 
 
-
-  let { img, description, title, uses, link } = props
   return (
     <ProjectContainer href={link} target="_blank" onMouseOver={handleMouseOver} onMouseOut={handleMouseOut}>
-  
       <ProjectImage style={{backgroundImage: `url(images/${img})`}}></ProjectImage>
       <ProjectText>
         <ProjectTitle>{title}</ProjectTitle>

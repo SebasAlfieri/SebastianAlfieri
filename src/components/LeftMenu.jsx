@@ -1,6 +1,9 @@
-import React from 'react'
+import React, { useEffect } from 'react'
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 import styled from 'styled-components'
 import KnowledgeItem from "./KnowledgeItem"
+import { Link } from "react-router-dom";
 
 const LeftMenuContainer = styled.div`
   display: flex;
@@ -70,26 +73,46 @@ const Knowledge = styled.div`
   height: 50%;
 `
 
-
-
-
 function LeftMenu() {
+
+  useEffect(() => {
+    AOS.init();
+  }, [])
+
+  
   return (
     <LeftMenuContainer>
     <TitlesContainer>
-      <TitleH1>Sebastian Alfieri</TitleH1>
-      <SubtitleH2>Web developer</SubtitleH2>
+      <TitleH1 data-aos="fade-down"
+      data-aos-duration="2000">Sebastian Alfieri</TitleH1>
+      <SubtitleH2 data-aos="fade-down"
+      data-aos-duration="1000">Web developer</SubtitleH2>
     </TitlesContainer>
     <Nav>
-      <NavLinks>⚆<span>Projects</span></NavLinks>
-      <NavLinks>⚆<span>Info</span></NavLinks>
-      <NavLinks>⚆<span>Contact</span></NavLinks>
+      <Link data-aos="fade-left"
+      data-aos-anchor="#example-anchor"
+      data-aos-offset="500"
+      data-aos-duration="500" style={{textDecoration:"none", color:"#F1F2EE"}} to="/about">
+        <NavLinks>⚆<span> About</span></NavLinks>
+      </Link>
+      <Link data-aos="fade-left"
+      data-aos-anchor="#example-anchor"
+      data-aos-offset="500"
+      data-aos-duration="1000" style={{textDecoration:"none", color:"#F1F2EE"}} to="/projects">
+        <NavLinks>⚆<span> Projects</span></NavLinks>
+      </Link>
+      <Link data-aos="fade-left"
+      data-aos-anchor="#example-anchor"
+      data-aos-offset="500"
+      data-aos-duration="1500" style={{textDecoration:"none", color:"#F1F2EE"}} to="/contact">
+        <NavLinks>⚆<span> Contact</span></NavLinks>
+      </Link>
     </Nav>
     <Knowledge>
-      <KnowledgeItem title="HTML" points="●●●●●●●●"/>
-      <KnowledgeItem title="CSS" points="●●●●●●●○"/>
-      <KnowledgeItem title="Js" points="●●●●●●○○"/>
-      <KnowledgeItem title="React Js" points="●●●●●○○○"/>
+      <KnowledgeItem title="HTML" points="●●●●●●●●" animation="2000"/>
+      <KnowledgeItem title="CSS" points="●●●●●●●○" animation="2300"/>
+      <KnowledgeItem title="Js" points="●●●●●●○○" animation="2600"/>
+      <KnowledgeItem title="React Js" points="●●●●●○○○" animation="3000"/>
     </Knowledge>
   </LeftMenuContainer>
   )

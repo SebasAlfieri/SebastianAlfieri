@@ -25,18 +25,18 @@ const Points = styled.div`
   color: #DCF763;
 `
 
-
-
 function KnowledgeItem(props) {
   
-
-  let { title, points } = props
+  let { title, points, animation } = props
 
   return (
-    <KnowContainer>
+    <KnowContainer 
+    data-aos="fade-left"
+    data-aos-anchor="#example-anchor"
+    data-aos-offset="500"
+    data-aos-duration={animation}>
       <Title>{title}</Title>
       <Points>{points}</Points>
-      
     </KnowContainer>
   )
 }

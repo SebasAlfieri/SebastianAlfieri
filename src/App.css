@@ -6,6 +6,10 @@
   padding: 0;
 }
 
+html{
+  overflow-y: hidden;
+}
+
 /* font-family: 'Montserrat', sans-serif; */
 ::-webkit-scrollbar {
 width: 10px;
@@ -21,4 +25,16 @@ width: 10px;
 
 ::-webkit-scrollbar-thumb:hover {
   background: #435058;
+}
+
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
 }
