@@ -13,7 +13,7 @@ const MenuMainContainer = styled.div`
   justify-content: center;
   align-items: center;
   height: 100vh;
-  width: 100vw;
+  width: 100%;
   background-color: #c7c7c7;
 `
 
@@ -22,7 +22,7 @@ const MenuContainer = styled.div`
   flex-direction: column;
   background-color: #E5E5E5;
   border: 1px solid black;
-  width: 95vw;
+  width: 95%;
   height: 90vh;
   box-shadow: 0px 0px 3px black;
 

@@ -95,8 +95,13 @@ const ContactBoxAnchor = styled.a`
 `
 
 const HoverContainer = styled.div`
+  color: rgba(255, 0, 0, 0);
   position: absolute;
   bottom: 15vh;
+
+  @media (min-width: 768px) {
+    color: black;
+  }
 `
 
 const ClickContainer = styled.div`
