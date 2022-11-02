@@ -39,10 +39,14 @@ const AboutImg = styled.div`
 `
 
 function About() {
-  
+
   useEffect(() => {
     AOS.init();
   }, [])
+
+  useEffect(() => {
+    document.title = `About me!`;
+  }, []);
 
   return (
   <AboutContainer>

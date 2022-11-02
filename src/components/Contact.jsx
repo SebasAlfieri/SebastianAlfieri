@@ -95,8 +95,6 @@ const ClickContainer = styled.div`
   bottom: 10vh;
 `
 
-
-
 function Contact() {
 
   const [isHovering, setIsHovering] = useState(false);
@@ -105,6 +103,10 @@ function Contact() {
   useEffect(() => {
     AOS.init();
   }, [])
+
+  useEffect(() => {
+    document.title = `Contact`;
+  }, []);
 
   const handleMouseOver = () => {
     setIsHovering(true);

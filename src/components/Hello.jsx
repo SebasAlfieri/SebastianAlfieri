@@ -3,9 +3,6 @@ import AOS from 'aos';
 import 'aos/dist/aos.css';
 import styled from 'styled-components'
 
-
-
-
 const HelloContainer = styled.div`
   display: flex;
   flex-direction: column;
@@ -43,6 +40,10 @@ function Hello() {
   useEffect(() => {
     AOS.init();
   }, [])
+
+  useEffect(() => {
+    document.title = `Sebastian Alfieri`;
+  }, []);
 
   return (
     <HelloContainer >

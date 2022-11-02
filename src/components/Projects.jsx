@@ -23,6 +23,10 @@ function Projects() {
     AOS.init();
   }, [])
 
+  useEffect(() => {
+    document.title = `My Projects`;
+  }, []);
+
   
   return (
     <ProjectsContainer  data-aos="fade-zoom-in"
