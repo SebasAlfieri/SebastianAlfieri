@@ -4,16 +4,21 @@ import 'aos/dist/aos.css';
 import styled from 'styled-components'
 import KnowledgeItem from "./KnowledgeItem"
 import { Link } from "react-router-dom";
+import { FaGithub } from 'react-icons/fa';
 
 const LeftMenuContainer = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 30%;
+  width: 100%;
   height: 100%;
   background-color: #435058;
   color: #F1F2EE;
+
+  @media (min-width: 768px) {
+    width: 30%;
+  }
 `
 
 const TitlesContainer = styled.div`
@@ -23,31 +28,48 @@ const TitlesContainer = styled.div`
   align-items: flex-start;
   width: 90%;
   height: 20%;
+  margin-left: 8%;
+
+  @media (min-width: 768px) {
+    align-items: flex-start;
+    margin-left: 0;
+  }
 `
 
 const TitleH1 = styled.h1`
 display: flex;
-justify-content: center;
-align-items: flex-end;
+justify-content: flex-end;
+align-items: flex-start;
 font-weight:300;
+
+@media (min-width: 768px) {
+    align-items: flex-end;
+  }
 `
 
 const SubtitleH2 = styled.h2`
 font-size: 1rem;
 display: flex;
 justify-content: center;
-align-items: flex-end;
 font-weight:300;
 `
 
 const Nav = styled.div`
   display: flex;
-  align-self: flex-start;
+  align-self: center;
   justify-content: space-evenly;
   flex-direction: column;
-  margin-left: 5%;
-  width: 50%;
+  margin-left: 20%;
+  width: 100%;
   height: 20%;
+
+  @media (min-width: 768px) {
+    align-self: flex-start;
+    align-items: flex-start;
+    width: 50%;
+    margin-left: 5%;
+  }
+  
 `
 
 const NavLinks = styled.div`
@@ -65,12 +87,38 @@ const NavLinks = styled.div`
 
 const Knowledge = styled.div`
   display: flex;
-  align-self: flex-start;
+  align-self: center;
   flex-direction: column;
   justify-content: space-evenly;
-  margin-left: 5%;
-  width: 50%;
+  margin-left: 0;
+  width: 80%;
   height: 50%;
+
+  @media (min-width: 768px) {
+    width: 50%;
+    align-self: flex-start;
+    margin-left: 5%;
+  }
+`
+
+const Github = styled.div`
+  display: flex;
+  width: 100%;
+  height: 5%;
+  font-size: 1.5rem;
+  margin-left: 5%;
+  justify-content: flex-start;
+  align-items: center;
+`
+
+const GithubIcon = styled.a`
+  color: #DCF763;
+  transition: 0.2s;
+
+  &:hover{
+    color: #e3f596;
+    transform: scale(1.2);
+  }
 `
 
 function LeftMenu() {
@@ -79,7 +127,6 @@ function LeftMenu() {
     AOS.init();
   }, [])
 
-  
   return (
     <LeftMenuContainer>
     <TitlesContainer>
@@ -114,6 +161,11 @@ function LeftMenu() {
       <KnowledgeItem title="Js" points="●●●●●●○○" animation="2600"/>
       <KnowledgeItem title="React Js" points="●●●●●○○○" animation="3000"/>
     </Knowledge>
+    <Github>
+      <GithubIcon href='https://github.com/SebasAlfieri' target={"_blank"}>
+        <FaGithub/>
+      </GithubIcon>
+    </Github>
   </LeftMenuContainer>
   )
 }

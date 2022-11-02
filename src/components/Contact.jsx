@@ -10,8 +10,13 @@ const ContactMainContainer = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 70%;
+  width: 100%;
   height: 100%;
+
+    
+  @media (min-width: 768px) {
+    width: 70%;
+  }
 `
 
 const ContactContainer = styled.div`
@@ -19,10 +24,15 @@ const ContactContainer = styled.div`
   flex-direction: column;
   background-color: #435058;
   color:#F1F2EE;
-  width: 60%;
-  height: 60%;
+  width: 90%;
+  height: 70%;
   border-top-left-radius: 25px;
   border-bottom-right-radius: 25px;
+
+    @media (min-width: 768px) {
+      width: 60%;
+      height: 60%;
+  }
 `
 
 const ContactTitle = styled.div`
@@ -38,10 +48,9 @@ const ContactTitle = styled.div`
 `
 
 const ContactBoxContainer = styled.div`
-width: 100%;
-height: 80%;
-display: flex;
-
+  width: 100%;
+  height: 80%;
+  display: flex;
 `
 
 const ContactBox = styled.div`
@@ -92,7 +101,15 @@ const HoverContainer = styled.div`
 
 const ClickContainer = styled.div`
   position: absolute;
-  bottom: 10vh;
+  bottom: 7vh;
+  background-color: white;
+  border: 1px solid black;
+  padding: 5px;
+  border-radius: 25px;
+  
+  @media (min-width: 768px) {
+      bottom: 7vh;
+  }
 `
 
 function Contact() {

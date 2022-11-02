@@ -8,11 +8,15 @@ const HelloContainer = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 70%;
+  width: 100%;
   height: 100%;
   background: linear-gradient(-45deg, #82878a, #E5E5E5, #E1E1E1, #82878a);
 	background-size: 400% 400%;
 	animation: gradient 15s ease infinite;
+
+  @media (min-width: 768px) {
+    width: 70%;
+  }
 `
 
 const HelloTextContainer = styled.div`
@@ -21,9 +25,13 @@ const HelloTextContainer = styled.div`
   justify-content: space-evenly;
   align-items: center;
   background-color: #fff;
-  width: 50%;
+  width: 90%;
   height: 30%;
   border-radius: 25px;
+
+  @media (min-width: 768px) {
+    width: 50%;
+  }
 `
 
 const HelloTitle = styled.h1`

@@ -10,12 +10,15 @@ const ProjectsContainer = styled.div`
   align-items: center;
   flex-wrap: wrap;
   overflow-y: auto;
-  width: 70%;
+  width: 100%;
   height: 100%;
   padding: 2%;
   overflow-x: hidden;
-`
 
+  @media (min-width: 768px) {
+    width: 70%;
+  }
+`
 
 function Projects() {
 
@@ -27,7 +30,7 @@ function Projects() {
     document.title = `My Projects`;
   }, []);
 
-  
+
   return (
     <ProjectsContainer  data-aos="fade-zoom-in"
     data-aos-easing="ease-in-back"
@@ -37,7 +40,7 @@ function Projects() {
         img="watchme.jpg"
         link="https://watchmealfieri.vercel.app/"
         title="WatchMe"
-        description="An e-commerce webpage including functional cart and back-end"
+        description="An e-commerce including a functional cart and back-end for products and orders management"
         uses="React Js - Firebase"/>
       <Project
         img="reflejar.jpg"
@@ -49,7 +52,7 @@ function Projects() {
         img="todito.jpg"
         link="https://sebasalfieri.github.io/Todito/"
         title="Drinking game"
-        description="A simple drinking game i made to play with my frinds"
+        description="A simple drinking game i made to play with friends"
         uses="Js"/>
       <Project
         img="widgets.jpg"

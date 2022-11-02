@@ -10,13 +10,18 @@ const ProjectContainer = styled.a`
   align-items: center;
   border: 1px solid #131313;
   background-color: #fff;
-  width: 40%;
-  height: 50%;
+  width: 80%;
+  height: 80%;
   margin-bottom: 10vh;
   transition: 0.3s;
   color: black;
   text-decoration: none;
   box-shadow: 1px 1px 5px black;
+
+  @media (min-width: 768px) {
+    height: 50%;
+    width: 40%;
+  }
 
   &:hover{
     transform: scale(1.1)
@@ -43,8 +48,13 @@ const ProjectText = styled.div`
 const ProjectTitle = styled.h3`
   width: 100%;
   height: 25%;
+  margin-top: 10px;
   text-align: center;
-  border-top: 1px solid #131313;
+  padding-top: 1px solid #131313;
+
+  @media (min-width: 768px) {
+    margin: 0;
+  }
 `
 
 const ProjectDescription = styled.p`
@@ -54,6 +64,11 @@ const ProjectDescription = styled.p`
   justify-content: center;
   align-items: center;
   text-align: center;
+  font-size: 0.8rem;
+  
+  @media (min-width: 768px) {
+    font-size: 1rem;
+  }
 `
 
 const ProjectHover = styled.div`

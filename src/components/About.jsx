@@ -8,16 +8,20 @@ const AboutContainer = styled.div`
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  width: 70%;
+  width: 100%;
   height: 100%;
+
+  @media (min-width: 768px) {
+    width: 70%;
+  }
 `
 
 const AboutText = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 60%;
-  height: 30%;
+  width: 90%;
+  height: 40%;
   text-align: center;
   background-color: #fff;
   padding-left: 5%;
@@ -25,6 +29,11 @@ const AboutText = styled.div`
   border-top-left-radius: 25px;
   border-bottom-right-radius: 25px;
   border: 2px solid #435058;
+
+  @media (min-width: 768px) {
+    width: 60%;
+    height: 30%;
+  }
 `
 
 const AboutImg = styled.div`
@@ -33,9 +42,13 @@ const AboutImg = styled.div`
   background-repeat: no-repeat;
   background-size:contain;
   border-radius: 50%;
-  width:20%;
-  height: 40%;
-  margin-bottom: 5vh;
+  width:30%;
+  height: 50%;
+  @media (min-width: 768px) {
+    margin-bottom: 5vh;
+    width:20%;
+    height: 40%;
+  }
 `
 
 function About() {
