@@ -50,7 +50,7 @@ function Hello() {
   }, [])
 
   useEffect(() => {
-    document.title = `Sebastian Alfieri`;
+    document.title = `Sebastian Alfieri - Portfolio`;
   }, []);
 
   return (

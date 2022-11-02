@@ -50,7 +50,7 @@ function Projects() {
         uses="React Js" />
       <Project
         img="todito.jpg"
-        link="https://sebasalfieri.github.io/Todito/"
+        link="https://todito.vercel.app/"
         title="Drinking game"
         description="A simple drinking game i made to play with friends"
         uses="Js"/>
@@ -67,11 +67,11 @@ function Projects() {
         description="A League of Legends webpage simulator"
         uses="Sass - Bootstrap"/>
       <Project
-        img="" 
-        link="https://watchmealfieri.vercel.app/"
-        title="WIP" 
-        description="WIP"
-        uses="Js"/>
+        img="valorant.jpg" 
+        link="https://valorant-wheat.vercel.app/"
+        title="Valorant - First Js" 
+        description="One of my first Js approaches. A bit inneficient. But looks cool!"
+        uses="Js - Responsive"/>
     </ProjectsContainer>
   )
 }

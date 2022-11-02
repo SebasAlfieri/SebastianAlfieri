@@ -6,6 +6,12 @@
   padding: 0;
 }
 
+@media (min-width: 1400px) {
+	html{
+		font-size: 1.5rem;
+	}
+}
+
 html{
 	overflow-y: hidden;
 	background-color: #c7c7c7
