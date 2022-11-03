@@ -21,7 +21,7 @@ const AboutText = styled.div`
   justify-content: center;
   align-items: center;
   width: 90%;
-  height: 40%;
+  height: 60%;
   text-align: center;
   background-color: #fff;
   padding-left: 5%;
@@ -44,7 +44,10 @@ const AboutImg = styled.div`
   border-radius: 50%;
   width:30%;
   height: 50%;
+  display: none;
+
   @media (min-width: 768px) {
+    display: flex;
     margin-bottom: 5vh;
     width:20%;
     height: 40%;
@@ -67,7 +70,7 @@ function About() {
      data-aos-duration="1000"></AboutImg>
     <AboutText data-aos="fade-up"
      data-aos-duration="2000">
-      I am a web developer from Buenos Aires, Argentina. highly motivated to create and grow in the programming world. I love learning and working with new technologies and I aspire to be the best developer I can become.
+      I am a web developer from Buenos Aires, Argentina. Highly motivated to create and grow in the programming world. If you're looking for someone who enjoys developing new websites, as well as someone who wishes to be in an enviroment that'll let him improve his abilities, you can count on me.
     </AboutText>
   </AboutContainer>
   )

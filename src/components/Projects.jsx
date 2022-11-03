@@ -45,7 +45,7 @@ function Projects() {
       <Project
         img="reflejar.jpg"
         link="https://reflejar-sebasalfieri.vercel.app/"
-        title="Reflejar"
+        title="Reflejar (W.I.P.)"
         description="A team freelance job where i worked as a developer for a data analysts group"
         uses="React Js" />
       <Project

@@ -55,8 +55,7 @@ function Hello() {
 
   return (
     <HelloContainer >
-      <HelloTextContainer data-aos="fade-up"
-     data-aos-duration="3000">
+      <HelloTextContainer data-aos="fade-up" data-aos-duration="3000">
         <HelloTitle>Hello!</HelloTitle>
         <HelloSubtitle>How do you take your coffee? ☕</HelloSubtitle>
       </HelloTextContainer>
